@@ -1,5 +1,10 @@
 const express = require('express');
-const Usuario = require('../models/usuario_model'); // Asumiendo la ruta del modelo
-const ruta = express.Router();
+const Usuario = require('../models/usuario_model');
+const Joi = require('@hapi/joi'); 
+const ruta = express.Router(); 
+
+ruta.get('/', (req, res) => {
+    res.json('Respuesta a petición GET de USUARIOS funcionando correctamente...');
+});
 
 module.exports = ruta;
